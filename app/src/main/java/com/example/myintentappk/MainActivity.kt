@@ -32,12 +32,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         tvResult = findViewById(R.id.tv_result)
 
-        if (intent != null){
+        if (intent.extras != null){
             val hasil = intent.getIntExtra(MoveForResultActivity.EXTRA_SELECTED_VALUE,0)
             val text = "Hasil : $hasil"
-            tvResult.setText(text)
-        }else{
-            val text = "Hasil Activity"
             tvResult.setText(text)
         }
     }
